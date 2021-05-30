@@ -15,13 +15,15 @@ namespace PaintBall
 
         public bool IsEmpty() { return _ballsLoaded == 0; }
 
-        public int GetBalls() { return _balls; }
-
-        public void SetBalls(int numberOfBalls)
-        {
-            if (numberOfBalls > 0)
-                _balls = numberOfBalls;
-            Reload();
+       public int balls
+        { 
+            get { return _balls; }
+            set 
+            {
+                if (value > 0)
+                    _balls = value;
+                Reload();
+            }
         }
 
         public void Reload()
